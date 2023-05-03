@@ -1,0 +1,17 @@
+<view class="container">
+<view class="inputView">
+<input class="input" type="text" placeholder="垃圾名称" bindinput="bindinput"  placeholder-style="color: #FFF" confirm-type="done" value="{{inputValue}}" />
+</view>
+<scroll-view scroll-y="true" class="scrollview" hidden="{{hideScroll}}" style="{{arrayHeight>340?'height:340rpx':''}}">
+  <view wx:for="{{bindSource}}">
+    <view id="{{index}}" bindtap="query" class="itemview">{{item.name}}<text wx:if="{{item.type == 0}}">可回收垃圾</text><text wx:elif="{{item.type == 1}}">有害垃圾</text><text wx:elif="{{item.type == 2}}">厨余（湿）垃圾</text><text wx:elif="{{item.type == 3}}">其他（干）垃圾</text></view>
+  </view>
+</scroll-view>
+<view class="result" wx:if="{{name}}">
+<text>名称：{{name}}</text>
+<view class="type"><text>分类：{{name}}是</text><text wx:if="{{type == 0}}">可回收垃圾</text><text wx:elif="{{type == 1}}">有害垃圾</text><text wx:elif="{{type == 2}}">厨余（湿）垃圾</text><text wx:elif="{{type == 3}}">其他（干）垃圾</text></view>
+<text>解释：{{explain}}</text>
+<text>包含物品：{{contain}}</text>
+<text>投放提示：{{tip}}</text>
+</view>
+</view>

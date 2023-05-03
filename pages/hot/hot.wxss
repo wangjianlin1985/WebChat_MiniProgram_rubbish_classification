@@ -1,0 +1,80 @@
+page{
+background: #36c9ea;
+  font-size: 16px;
+    background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565888415760&di=019943285cfd5ca0859a94e1470cca89&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201501%2F15%2F20150115124529_aAGst.jpeg") no-repeat 0 0;
+background-size: 110% auto;
+}
+.container {
+  padding:20rpx 0;
+}
+.queryhot{
+ margin: 12rpx auto; 
+}
+
+.item {
+  font-size: 30rpx;
+  display:flex;
+
+}
+.first {
+  color:red;
+}
+
+.sanjiao{
+  width: 18rpx;
+  height: 10rpx;
+  margin-left: 20rpx;
+  transition: 0.5s;/* 选转图片过渡 */
+ }
+ .select{
+  position: absolute;
+  z-index: 10;
+  border: 2rpx solid #aaaaaa;
+  padding: 0 8rpx;
+  top:60rpx;
+  /*left: -10rpx;*/
+  width: 210rpx;
+  overflow: auto;
+  height: 0;
+  max-height: 200rpx;
+  background-color:#fff;
+  box-sizing: border-box;
+  transition: height 0.5s;/* 高度变换过渡 */
+ }
+ .select .type{
+  color: #aaaaaa;
+  border-top: 2px solid #dadada;
+  padding: 6rpx;
+ }
+ .select :first-child{
+  border: 0;
+ }
+
+
+
+
+.itemview{
+margin: 12rpx ;
+}
+.scrollview, .inputView{
+  width:96%;
+  margin: 30rpx 30rpx 0rpx;
+   border:  4rpx solid #fff;
+   border-radius: 10rpx;
+}
+.scrollview{
+  margin-top:0prx;
+color: #000000;
+}
+.itemview{
+  margin: 20rpx 30rpx;
+}
+.itemview text{
+  margin-left: 100rpx;
+}
+.inputView input{
+height: 60rpx;
+color: #fff;
+margin-left: 26rpx;
+  font-size: 12px;
+}

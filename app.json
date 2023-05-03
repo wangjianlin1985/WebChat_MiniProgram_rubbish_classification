@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/hot/hot",
+    "pages/upload/upload",
+    "pages/news/news",
+    "pages/news/detial/detial"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2f2f2f",
+    "selectedColor": "#ff7000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tap_bar_01.png",
+        "selectedIconPath": "images/tap_bar_01_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/hot/hot",
+        "iconPath": "images/tap_bar_02.png",
+        "selectedIconPath": "images/tap_bar_02_active.png",
+        "text": "热搜"
+      },
+      {
+        "pagePath": "pages/upload/upload",
+        "iconPath": "images/tap_bar_03.png",
+        "selectedIconPath": "images/tap_bar_03_active.png",
+        "text": "识图"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "images/tap_bar_04.png",
+        "selectedIconPath": "images/tap_bar_04_active.png",
+        "text": "知识"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

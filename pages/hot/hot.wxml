@@ -1,0 +1,24 @@
+<view class="container">
+<view class="queryhot" hidden="true">垃圾分类搜索热榜</view>
+
+<view class="item">
+ <label class="first">垃圾分类：</label>
+ <!-- 通过点击事件改变图片的旋转角度、自定义下拉框的高度 -->
+ <view class="value" bindtap="select">
+ <view style="display:inline-block;">{{type!=''?type:'选择垃圾分类'}}</view>
+ <image src="/images/arrow-r-0.png" class="sanjiao" style="{{isSelect?'transform:rotateZ(180deg)':''}}"/>
+ <!-- select -->
+ <view class="select" style="{{isSelect?'height:'+54*types.length+'rpx;':'border:0'}}">
+ <view class="type" catchtap="getType" wx:for="{{types}}" data-type="{{item}}" wx:key="type">{{item}}</view>
+ </view>
+ </view>
+</view> 
+
+
+
+<scroll-view scroll-y="true" class="scrollview" hidden="{{hideScroll}}" style="{{arrayHeight>340?'height:90%':''}}">
+  <view wx:for="{{bindSource}}">
+    <view id="{{index}}" bindtap="query" class="itemview">{{item.name}}<text wx:if="{{item.type == 0}}">可回收垃圾</text><text wx:elif="{{item.type == 1}}">有害垃圾</text><text wx:elif="{{item.type == 2}}">厨余（湿）垃圾</text><text wx:elif="{{item.type == 3}}">其他（干）垃圾</text></view>
+  </view>
+</scroll-view>
+</view>
